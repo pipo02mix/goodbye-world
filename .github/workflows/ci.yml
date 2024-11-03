@@ -30,11 +30,11 @@ jobs:
 
     - name: Build container image
       run: |
-        docker build -t goodbye-world:${{ env.version }} .
+        docker build -t ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ env.version }} .
 
     - name: Push container image
       run: |
-        docker push goodbye-world:${{ env.version }}
+        docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ env.version }}
 
     - name: Generate SBOM
       id: sbom
