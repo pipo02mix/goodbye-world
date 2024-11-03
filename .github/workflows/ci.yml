@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
 
     steps:
     - name: Checkout code
@@ -30,11 +33,11 @@ jobs:
 
     - name: Build container image
       run: |
-        docker build -t ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ env.version }} .
+        docker build -t ghcr.io/${{ github.repository }}:${{ env.version }} .
 
     - name: Push container image
       run: |
-        docker push ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ env.version }}
+        docker push ghcr.io/${{ github.repository }}:${{ env.version }}
 
     - name: Generate SBOM
       id: sbom
