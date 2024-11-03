@@ -1,3 +1,9 @@
 ## Goodbye world
 
-This is a test of the emergency broadcast system. This is only a test. If this were a real emergency, you would be instructed to panic. But it's not, so don't.
+This is an app that says goodbye to the world. It's a simple app that demonstrates how to dumb I am.
+
+## Installation
+
+```bash
+npm install -g goodbye-world
+```
