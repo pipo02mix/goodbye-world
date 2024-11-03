@@ -28,11 +28,11 @@ jobs:
         echo "Next version: $next_version"
         echo "version=$next_version" >> $GITHUB_ENV
 
-    - name: Build Docker image
+    - name: Build container image
       run: |
         docker build -t goodbye-world:${{ env.version }} .
 
-    - name: Build Docker image
+    - name: Push container image
       run: |
         docker push goodbye-world:${{ env.version }}
 
