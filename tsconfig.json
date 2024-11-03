@@ -5,6 +5,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true
-  }
+  },
+  "exclude": [
+    "**/*.test.ts",                           // exclude all test files
+    "**/*.spec.ts",                           // optionally exclude files named *.spec.ts
+    "node_modules"                            // always exclude node_modules
+  ]
 }
 
