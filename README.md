@@ -7,3 +7,9 @@ This is an app that says goodbye to the world. It's a simple app that demonstrat
 ```bash
 npm install -g goodbye-world
 ```
+
+## Usage
+
+```bash
+goodbye-world
+```
